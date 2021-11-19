@@ -14,3 +14,19 @@ a {
 * {
   box-sizing: border-box;
 }
+
+/* TODO style with styled-companents */
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+.ant-layout-has-sider {
+  height: 100vh;
+}
