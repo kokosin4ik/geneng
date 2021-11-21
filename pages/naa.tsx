@@ -60,7 +60,7 @@ const Naa: NextPage = () => {
           allowClear
           bordered
           placeholder='Последовательность cDNA / RNA'
-          // TODO add validation of input
+        // TODO add validation of input
         />
       </Form.Item>
 
@@ -75,11 +75,18 @@ const Naa: NextPage = () => {
 
         <Col span={6} offset={8}>
           <Form.Item name="readingMode" label="Reading mode">
-            <Select
-              placeholder="Select a option and change input text above"
-            >
-              <Option value="first-start-codon">First start-codon</Option>
-              <Option value="all-potential-start-codons">All potential start-codons</Option>
+            <Select>
+              <Option value={ReadingMode.FirstStartCodon}>First start-codon</Option>
+              <Option value={ReadingMode.AllPotentialCodons}>All potential start-codons</Option>
+              {/* disabled for now */}
+              <Option value="2" disabled>Homo sapiens</Option>
+              <Option value="3" disabled>Mus musculus</Option>
+              <Option value="4" disabled>Rattus norvegicus</Option>
+              <Option value="5" disabled>Drosophila melanogaster</Option>
+              <Option value="6" disabled>Caenorhabditis elegans</Option>
+              <Option value="7" disabled>Saccharomyces cerevisiae</Option>
+              <Option value="8" disabled>Escherichia coli</Option>
+              <Option value="9" disabled>Bacillus subtilis</Option>
             </Select>
           </Form.Item>
         </Col>
@@ -92,8 +99,8 @@ const Naa: NextPage = () => {
             >
               <Radio.Group>
                 <Space direction="vertical">
-                  <Radio value="single-letter">Single-letter</Radio>
-                  <Radio value="three-letter">Three-letter</Radio>
+                  <Radio value={AaAbbreviations.SingleLetter}>Single-letter</Radio>
+                  <Radio value={AaAbbreviations.ThreeLetters}>Three-letter</Radio>
                 </Space>
               </Radio.Group>
             </Form.Item>
@@ -103,9 +110,9 @@ const Naa: NextPage = () => {
 
       <Form.Item name="outputProtein" label='Protein (Output)'>
         <TextArea
-          rows={TEXT_AREA_SIZE}
-          showCount
           allowClear
+          disabled
+          autoSize
           bordered
           placeholder='Протеиновая последовательность'
         />
@@ -113,8 +120,7 @@ const Naa: NextPage = () => {
 
       <Form.Item name="outputItself" label='cDNA or RNA sequence of the protein itself (Output)'>
         <TextArea
-          rows={TEXT_AREA_SIZE}
-          showCount
+          autoSize
           allowClear
           bordered
           placeholder='Последовательность cDNA / RNA'
