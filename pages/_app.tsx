@@ -1,7 +1,7 @@
 import 'antd/dist/antd.css';
 import '../styles/globals.css'
 
-import { AppLayout } from '../layouts/AppLayout'
+import { AppLayout } from '../layouts/main/AppLayout'
 
 import type { AppProps } from 'next/app'
 
