@@ -23,10 +23,6 @@ a {
   background: rgba(255, 255, 255, 0.3);
 }
 
-.site-layout .site-layout-background {
-  background: #fff;
-}
-
 .ant-layout-has-sider {
   height: 100vh;
 }

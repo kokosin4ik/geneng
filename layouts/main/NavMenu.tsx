@@ -1,6 +1,6 @@
 import React from 'react';
 import { useRouter } from "next/router";
-import { UserOutlined, VideoCameraOutlined } from '@ant-design/icons';
+import { BuildOutlined, VideoCameraOutlined } from '@ant-design/icons';
 import { Menu } from 'antd';
 import Link from 'next/link';
 
@@ -13,7 +13,7 @@ interface Route {
 const routes: Route[] = [{
     name: "Nucleotides to amino acids",
     href: "/naa",
-    icon: <UserOutlined />,
+    icon: <BuildOutlined />,
 }, {
     name: "Multimerization",
     href: "/multimerization",
