@@ -74,6 +74,10 @@ const triplets = {
 
 const tr_2 = transformToLower(replaceYFrom(triplets, a_d_2))
 
+tr_2['taa'] = '[stop]'
+tr_2['tag'] = '[stop]'
+tr_2['tga'] = '[stop]'
+
 const tr_2_u = transformToLower(transformKeys(tr_2, (key: string) => key.replace(/t/g, 'u')))
 
 console.log(tr_2, tr_2_u)
