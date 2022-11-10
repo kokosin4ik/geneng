@@ -74,8 +74,9 @@ const triplets = {
 
 const tr_2 = transformToLower(replaceYFrom(triplets, a_d_2))
 
-const tr_2_u = transformToLower(transformKeys(tr_2, (key: string) => key.replaceAll('t', 'u')))
+const tr_2_u = transformToLower(transformKeys(tr_2, (key: string) => key.replace(/t/g, 'u')))
 
+console.log(tr_2, tr_2_u)
 
 const getComplimentary = (string: string) => {
   const complim = {
@@ -157,7 +158,7 @@ const Multimerization: NextPage = () => {
           <Col span={3}>
 
             <Form.Item name="number" label="Номер замены">
-              <InputNumber min={1} max={3} />
+              <InputNumber min={1} max={3} placeholder="Номер"/>
             </Form.Item>
           </Col>
           <Col span={3}>
@@ -165,7 +166,7 @@ const Multimerization: NextPage = () => {
             <Form.Item name="sub" label='Замена'>
               <Input
                 maxLength={1}
-                placeholder='sub'
+                placeholder='Замена'
               />
             </Form.Item>
           </Col>
